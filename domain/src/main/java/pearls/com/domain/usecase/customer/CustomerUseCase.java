@@ -64,14 +64,14 @@ public class CustomerUseCase {
         return Customer.builder()
                 .address(customerInput.getAddress())
                 .availableCredit(customerInput.getAvailableCredit())
-                .city(city)
-                .country(country)
+                .city(city.toString())
+                .country(country.toString())
                 .creditLimit(customerInput.getCreditLimit())
                 .fullname(customerInput.getFullname())
                 .nit(customerInput.getNit())
                 .phone(customerInput.getPhone())
-                .state(state)
-                .visitsPercentage(customerInput.getVisitPercentage())
+                .state(state.toString())
+                .visitsPercentage(customerInput.getVisitsPercentage())
                 .build();
     }
 

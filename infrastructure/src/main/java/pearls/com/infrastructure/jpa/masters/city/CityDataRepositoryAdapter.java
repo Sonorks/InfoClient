@@ -30,4 +30,9 @@ public class CityDataRepositoryAdapter extends AdapterOperations<CityData, Long,
         CityData cityData = this.getById(code);
         return MapperUtil.mapCity(cityData);
     }
+
+    @Override
+    public List<City> getAllCities() {
+        return this.repository.findAll().stream().map(cityData -> MapperUtil.mapCity(cityData)).collect(Collectors.toList());
+    }
 }

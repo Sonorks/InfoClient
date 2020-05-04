@@ -31,4 +31,9 @@ public class VisitDataRepositoryAdapter extends AdapterOperations<VisitData, Lon
         this.save(MapperUtil.mapVisitData(visit));
         return  VISIT_CREATED_SUCCESSFULLY;
     }
+
+    @Override
+    public List<Visit> getAllVisits() {
+        return this.repository.findAll().stream().map(visitData -> MapperUtil.mapVisit(visitData)).collect(Collectors.toList());
+    }
 }

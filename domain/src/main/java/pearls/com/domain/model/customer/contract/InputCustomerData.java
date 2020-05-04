@@ -17,5 +17,5 @@ public class InputCustomerData {
     private Long country;
     private double creditLimit;
     private double availableCredit;
-    private double visitPercentage;
+    private double visitsPercentage;
 }

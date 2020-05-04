@@ -11,9 +11,9 @@ public class Customer {
     private String fullname;
     private String address;
     private String phone;
-    private Long city;
-    private Long state;
-    private Long country;
+    private String city;
+    private String state;
+    private String country;
     private double creditLimit;
     private double availableCredit;
     private double visitsPercentage;

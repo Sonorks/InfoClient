@@ -2,10 +2,7 @@ package pearls.com.infrastructure.entrypoints;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pearls.com.domain.model.master.City;
 import pearls.com.domain.model.master.Country;
 import pearls.com.domain.model.master.SalesRepresentative;
@@ -14,6 +11,7 @@ import pearls.com.domain.usecase.master.MasterUseCase;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(value="/master", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MasterService {

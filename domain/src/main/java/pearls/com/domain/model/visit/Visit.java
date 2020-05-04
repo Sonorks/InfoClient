@@ -19,4 +19,5 @@ public class Visit {
     private double net;
     private double visitTotal;
     private String description;
+    private String city;
 }

@@ -20,13 +20,13 @@ public class MapperUtil {
         return Customer.builder()
                 .address(customerData.getAddress())
                 .availableCredit(customerData.getAvailableCredit())
-                .city(customerData.getCity().getCode())
-                .country(customerData.getCountry().getCode())
+                .city(customerData.getCity().getDescription())
+                .country(customerData.getCountry().getDescription())
                 .creditLimit(customerData.getCreditLimit())
                 .fullname(customerData.getFullname())
                 .nit(customerData.getNit())
                 .phone(customerData.getPhone())
-                .state(customerData.getState().getCode())
+                .state(customerData.getState().getDescription())
                 .visitsPercentage(customerData.getVisits_percentage())
                 .build();
     }
@@ -63,11 +63,11 @@ public class MapperUtil {
 
     public static CustomerData mapCustomerData(Customer customer) {
         CityData city = new CityData();
-        city.setCode(customer.getCity());
+        city.setCode(Long.parseLong(customer.getCity()));
         CountryData country = new CountryData();
-        country.setCode(customer.getCountry());
+        country.setCode(Long.parseLong(customer.getCountry()));
         StateData state = new StateData();
-        state.setCode(customer.getState());
+        state.setCode(Long.parseLong(customer.getState()));
         CustomerData customerData = new CustomerData();
         customerData.setAddress(customer.getAddress());
         customerData.setAvailableCredit(customer.getAvailableCredit());
@@ -90,6 +90,7 @@ public class MapperUtil {
                 .net(visitData.getNet())
                 .salesRepresentative(visitData.getSalesRepresentative().getCode())
                 .visitTotal(visitData.getVisit_total())
+                .city(visitData.getCity())
                 .build();
     }
 
@@ -105,6 +106,7 @@ public class MapperUtil {
         visitData.setNet(visit.getNet());
         visitData.setVisit_total(visit.getVisitTotal());
         visitData.setSalesRepresentative(salesRepData);
+        visitData.setCity(visit.getCity());
         return visitData;
     }
 }

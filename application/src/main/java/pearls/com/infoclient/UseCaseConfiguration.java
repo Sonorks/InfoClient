@@ -17,8 +17,8 @@ import pearls.com.domain.usecase.visit.port.VisitRepository;
 public class UseCaseConfiguration {
 
     @Bean
-    public VisitUseCase visitUseCase(VisitRepository visitRepository){
-        return new VisitUseCase(visitRepository);
+    public VisitUseCase visitUseCase(VisitRepository visitRepository, CustomerRepository customerRepository, CityRepository cityRepository){
+        return new VisitUseCase(visitRepository, customerRepository, cityRepository);
     }
 
     @Bean

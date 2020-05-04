@@ -7,4 +7,6 @@ import java.util.List;
 public interface CityRepository {
     List<City> getCitiesByState(Long state);
     City getCityById(Long code);
+
+    List<City> getAllCities();
 }

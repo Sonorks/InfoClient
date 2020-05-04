@@ -9,7 +9,7 @@ import pearls.com.domain.usecase.customer.CustomerUseCase;
 
 import java.util.List;
 
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(value="/customer",produces = MediaType.APPLICATION_JSON_VALUE)
 public class CustomerService {
@@ -33,6 +33,7 @@ public class CustomerService {
         return customerUseCase.createCustomer(inputCustomerData);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping
     public String updateCustomer(@RequestBody InputCustomerData inputCustomerData){
         return customerUseCase.updateCustomer(inputCustomerData);

@@ -26,4 +26,5 @@ public class VisitData {
     private double net;
     private double visit_total;
     private String description;
+    private String city;
 }
