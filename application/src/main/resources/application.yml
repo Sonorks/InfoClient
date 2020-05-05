@@ -5,6 +5,6 @@ spring:
     username: sql10337849
     password: dINsRLs9UW
   jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
+    hibernate.ddl-auto: none
+    generate-ddl: false
     show-sql: true
