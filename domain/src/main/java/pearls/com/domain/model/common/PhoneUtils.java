@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 public class PhoneUtils {
 
     public static boolean validateCellPhoneNumber(String phoneNumber){
-        return phoneNumber != null && !phoneNumber.isEmpty() && phoneNumber.matches("^[0-9]{12}");
+        return phoneNumber != null && !phoneNumber.isEmpty() && phoneNumber.matches("^[0-9]{1,12}");
     }
 }
