@@ -83,9 +83,10 @@ public class MapperUtil {
     }
 
     public static Visit mapVisit(VisitData visitData) {
+
         return Visit.builder()
                 .customer(visitData.getIdcustomer().getNit())
-                .date(visitData.getDate())
+                .date(DateUtil.formatDateToString(visitData.getDate()))
                 .description(visitData.getDescription())
                 .net(visitData.getNet())
                 .salesRepresentative(visitData.getSalesRepresentative().getCode())
@@ -101,7 +102,7 @@ public class MapperUtil {
         salesRepData.setCode(visit.getSalesRepresentative());
         VisitData visitData = new VisitData();
         visitData.setIdcustomer(customerData);
-        visitData.setDate(visit.getDate());
+        visitData.setDate(DateUtil.formatStringToDate(visit.getDate()));
         visitData.setDescription(visit.getDescription());
         visitData.setNet(visit.getNet());
         visitData.setVisit_total(visit.getVisitTotal());

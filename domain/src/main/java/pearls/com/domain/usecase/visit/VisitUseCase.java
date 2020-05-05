@@ -1,7 +1,6 @@
 package pearls.com.domain.usecase.visit;
 
 import lombok.RequiredArgsConstructor;
-import pearls.com.domain.model.customer.Customer;
 import pearls.com.domain.model.master.City;
 import pearls.com.domain.model.visit.Visit;
 import pearls.com.domain.model.visit.VisitPerCity;

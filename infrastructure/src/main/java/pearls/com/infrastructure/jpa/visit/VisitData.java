@@ -2,7 +2,6 @@ package pearls.com.infrastructure.jpa.visit;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pearls.com.domain.model.customer.Customer;
 import pearls.com.infrastructure.jpa.customer.CustomerData;
 import pearls.com.infrastructure.jpa.masters.salesrepresentative.SalesRepData;
 
@@ -15,6 +14,7 @@ import java.util.Date;
 @Table(name="visit")
 public class VisitData {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     @ManyToOne
     @JoinColumn(name="idcustomer")

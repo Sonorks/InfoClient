@@ -1,12 +1,9 @@
 package pearls.com.domain.model.visit;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 
 @Builder
 @Getter
@@ -14,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Visit {
     private String customer;
-    private Date date;
+    private String date;
     private Long salesRepresentative;
     private double net;
     private double visitTotal;
