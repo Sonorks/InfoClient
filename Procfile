@@ -1,1 +1,1 @@
-web: java -Dserver.port=${PORT:7620} -jar application/build/libs/application-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=7620 -jar application/build/libs/application-0.0.1-SNAPSHOT.jar
